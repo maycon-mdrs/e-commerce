@@ -9,7 +9,7 @@ const data = [
   },
   {
     id: 1,
-    title: "Taco Mexicano",
+    title: "ATaco Mexicano",
     price: "12,99",
     description: "Saborosas tortilhas macias ou crocantes abrigam uma seleção de carne suculenta, legumes crocantes e molhos picantes, oferecendo uma explosão de sabores em cada mordida.",
     imageUrl: "https://tacoechillidorao.com.br/wp-content/uploads/2021/02/taco-de-carne-1024x1024.png",
