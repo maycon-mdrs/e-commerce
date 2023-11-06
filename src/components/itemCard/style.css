@@ -1,0 +1,19 @@
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Define o número máximo de linhas desejado. */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-card-body {
+    padding: 1rem!important;
+}
+
+.ant-card-body h4 {
+    color: var(--logo);
+}
+
+.button-comprar {
+    border-radius: 30px!important;
+}
