@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image';
 import '../style.css';
 
-import Logo from '../../images/login/logo.png';
+import Logo from '../../images/logo.png';
 
 import { Form, Input, Button, Alert } from 'antd';
 import { useAuth } from "../../context/AuthProvider/useAuth";
@@ -21,7 +21,7 @@ export function Login () {
                     <Image src={Logo} style={{maxWidth: '120px'}}/>
                 </Card.Title>
                 <Card.Title className='d-flex justify-content-center mb-1 title'>
-                    EcoGREEN
+                    FRASH FAIRE
                 </Card.Title>
                 <Card.Text className="text-center px-2" style={{maxWidth: '322px'}}>
                     Cadastre-se ou faça o login para acessar o sistema!

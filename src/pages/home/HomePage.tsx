@@ -6,10 +6,19 @@ import { SideBar } from "../../components/sideBar/SideBar";
 import products from "../../database/data";
 
 import './home.css';
+import { MyModal } from "../../components/modal/MyModal";
 
 export function HomePage() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [sortedData, setSortedData] = useState(products);
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const handleBuyClick = (product: any) => {
+        setSelectedProduct(product);
+        setModalVisible(true);
+    };
 
     useEffect(() => {
         let sortedProducts = [...products]; // Copia os produtos para evitar mutações diretas
@@ -39,6 +48,18 @@ export function HomePage() {
                     <MainHome products={sortedData} />
                 </div>
             </div>
+
+            {selectedProduct && (
+                <MyModal
+                    title="Detalhes do Produto"
+                    content="Descrição adicional do produto."
+                    open={modalVisible}
+                    onCancel={() => setModalVisible(false)}
+                    imageUrl={selectedProduct.imageUrl}
+                    productTitle={selectedProduct.title}
+                    productPrice={selectedProduct.price}
+                />
+            )}
         </>
     );
 }

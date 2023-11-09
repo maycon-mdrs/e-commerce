@@ -4,6 +4,7 @@ import './nav.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png'
 import { Button } from 'antd';
+import { MyModal } from '../modal/MyModal';
 
 export function MyNav() {
     return (
@@ -22,7 +23,7 @@ export function MyNav() {
                     <span>Fresh Faire</span>
                 </Link>
                 <Link to={"/carrinho"}>
-                    <Button className='meu-carrinho'>
+                    <Button className='meu-carrinho' /* onClick={showModal} */>
                         <AiOutlineShoppingCart className="nav-icons" />
                         <span>Meu carrinho</span>
                     </Button>

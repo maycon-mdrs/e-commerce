@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image';
 import '../style.css';
-import Logo from '../../images/login/logo.png';
+import Logo from '../../images/logo.png';
 
 import { Form, Input, Button, Alert } from 'antd';
 import { Link, useNavigate } from "react-router-dom"; // Import useNavigate

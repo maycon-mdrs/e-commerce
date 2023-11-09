@@ -1,6 +1,7 @@
 nav {
     border-bottom: 2px solid #f1f1f1;
     position: fixed;
+    padding: 10px;
     z-index: 999;
     width: 100%;
     background: white;
@@ -26,7 +27,7 @@ a {
 .logo span {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--logo);
+    color: var(--logo2);
 }
 
 .meu-carrinho {

@@ -1,17 +1,39 @@
 import './sideBar.css';
+import type { RadioChangeEvent } from 'antd';
+import { ConfigProvider, Input, Radio, Space } from 'antd';
 import { MyInput } from '../input/MyInput';
+import { MyRadio } from '../input/MyRadio';
+import { useState } from 'react';
 
-export function SideBar({handleChange}: any) {
+export function SideBar({ handleChange }: any) {
     return (
-        <>
+        <ConfigProvider
+            theme={{
+                components: {
+                    Radio: {
+                        colorPrimary: '#cf301a',
+                    }
+                },
+            }}
+        >
             <section className="sidebar shadow-sm">
-                <h5 style={{width: 'max-content'}}>Ordenar por</h5>
-                <div className='d-flex flex-column' style={{gap: '10px'}}>
+                <h5 style={{ width: 'max-content' }}>Ordenar por</h5>
+                <Radio.Group onChange={handleChange}>
+                    <Space direction="vertical">
+                        <Radio value={'menor-preco'}>Menor preço</Radio>
+                        <Radio value={'maior-preco'}>Maior preço</Radio>
+                        <Radio value={'a-z'}>A-Z</Radio>
+                        <Radio value={'z-a'}>Z-A</Radio>
+                    </Space>
+                </Radio.Group>
+                {/* 
+                <div className='d-flex flex-column' style={{ gap: '10px' }}>
+
                     <MyInput
                         handleChange={handleChange}
                         value="menor-preco"
                         title="Menor preço"
-                        name="input"                  
+                        name="input"
                     />
                     <MyInput
                         handleChange={handleChange}
@@ -31,8 +53,9 @@ export function SideBar({handleChange}: any) {
                         title="Z-A"
                         name="input"
                     />
-                </div>
+                </div> 
+            */}
             </section>
-        </>
+        </ConfigProvider >
     );
 }

@@ -11,9 +11,14 @@
 }
 
 .ant-card-body h4 {
-    color: var(--logo);
+    color: var(--logo2);
 }
 
 .button-comprar {
     border-radius: 30px!important;
+    background-color: var(--logo2)!important;
+}
+
+.button-comprar:hover {
+    background-color: #fc3b22!important;
 }

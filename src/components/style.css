@@ -13,12 +13,14 @@
     --verde-escuro: #067655;
     --verde-claro: #0CB07F;
     --logo: #23303d;
+    --logo2: #cf301a;
+    --logo2hover: #fc3b22;
     --bg: #fafafa;
 }
 
 /* Titulo */
 .title {
-    color: var(--verde-escuro);
+    color: var(--logo);
     font-weight: bold;
 }
 
@@ -35,10 +37,10 @@ Button {
 }
 /* botão login */
 .button {
-    background-color: var(--verde-escuro);
+    background-color: var(--logo2);
 }
 .button:hover {
-    background-color: var(--verde-claro)!important;
+    background-color: var(--logo2hover) !important;
 }
 
 /* botão cadastro */
