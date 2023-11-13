@@ -5,7 +5,7 @@ import { useState } from "react";
 interface MyButtonProps {
     onClickHandler: () => any;
     text: string;
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     className: string;
     style?: React.CSSProperties;
 }
@@ -13,7 +13,6 @@ interface MyButtonProps {
 export function MyButton({ onClickHandler, text, icon, className, style }: MyButtonProps) {
     const antIcon = <LoadingOutlined spin style={{color: 'white'}} />;
     const [loading, setLoading] = useState(false);  
-
     return (
         <Button
             type="primary"

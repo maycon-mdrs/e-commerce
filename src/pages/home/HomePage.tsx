@@ -7,19 +7,20 @@ import products from "../../database/data";
 
 import './home.css';
 import { MyModal } from "../../components/modal/MyModal";
+import { Product } from "../../models/Product";
 
 export function HomePage() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [sortedData, setSortedData] = useState(products);
 
     const [modalVisible, setModalVisible] = useState(false);
-    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
     const handleBuyClick = (product: any) => {
         setSelectedProduct(product);
         setModalVisible(true);
     };
-
+    
     useEffect(() => {
         let sortedProducts = [...products]; // Copia os produtos para evitar mutações diretas
         if (selectedCategory === 'menor-preco') {
@@ -45,14 +46,12 @@ export function HomePage() {
             <div className="main-container">
                 <div className="container d-flex mt-4">
                     <SideBar handleChange={handleChange} />
-                    <MainHome products={sortedData} />
+                    <MainHome products={sortedData} handleBuyClick={handleBuyClick} />
                 </div>
             </div>
 
             {selectedProduct && (
                 <MyModal
-                    title="Detalhes do Produto"
-                    content="Descrição adicional do produto."
                     open={modalVisible}
                     onCancel={() => setModalVisible(false)}
                     imageUrl={selectedProduct.imageUrl}

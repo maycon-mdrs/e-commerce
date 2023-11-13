@@ -1,0 +1,12 @@
+.count {
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 100%;
+    color: rgba(0,0,0,.87);
+    font-size: 14px;
+    font-weight: 400;
+    height: 47px;
+    margin: 0 12px;
+    outline: none;
+    text-align: center;
+    width: 47px;
+}

@@ -15,23 +15,7 @@ declare module 'react' {
     }
 }
 
-export function ItemCard({ title, price, description, imageUrl, quantityAvailable }: Product) {
-    const [modalVisible, setModalVisible] = useState(false);
-
-    const handleShowModal = () => {
-        setModalVisible(true);
-    };
-
-    const handleOk = () => {
-        // Lógica para quando o modal é confirmado
-        setModalVisible(false);
-    };
-
-    const handleCancel = () => {
-        // Lógica para quando o modal é cancelado
-        setModalVisible(false);
-    };
-
+export function ItemCard({ title, price, description, imageUrl, handleBuyClick }: any) {
     return (
         <Card
             className="item-card shadow-sm"
@@ -58,7 +42,7 @@ export function ItemCard({ title, price, description, imageUrl, quantityAvailabl
                 </div>
 
                 <MyButton
-                    onClickHandler={() => ({ title, price, description, imageUrl })}
+                    onClickHandler={handleBuyClick}
                     text="Comprar"
                     icon={<ShoppingCartOutlined style={{ fontSize: '20px' }} />}
                     className="button-comprar"
